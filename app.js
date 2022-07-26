@@ -1,5 +1,8 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
+
+app.use(cors());
 
 app.use(express.json());
 
@@ -16,5 +19,3 @@ app.get("*", (req, res) => {
 });
 
 module.exports = app;
-
-//need cors to connect to react frontend application//
