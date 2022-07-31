@@ -22,6 +22,7 @@ transactions.get("/:index", (req, res) => {
 //CREATE
 transactions.post("/", (req, res) => {
   transactionData.push(req.body);
+  console.log(req.body)
   res.json(transactionData[transactionData.length - 1]);
 });
 
